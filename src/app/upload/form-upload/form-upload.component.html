@@ -5,7 +5,20 @@
 </div>
 
 <label class="btn btn-default">
-  <input type="file" (change)="selectFile($event)">
+  <input type="file" id="campoSelect" (change)="selectFile($event)">
 </label>
+<div
 
-<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+id="descriptionsFile"
+style='display: none'>
+
+</div>
+
+<div
+class="alert alert-danger" role="alert"
+id="msgErro"
+style='display: none'>
+Aruivo invalido, pois passa o tamanho permitido.
+</div>
+<br />
+<button id="bt" class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()" style=display:none>ENVIAR ARQUIVO</button>

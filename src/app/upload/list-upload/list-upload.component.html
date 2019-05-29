@@ -1,10 +1,10 @@
-<button class="button btn-info" *ngIf='showFile' (click)='showFiles(false)'>Hide Files</button>
+<button class="button btn-info" *ngIf='showFile' (click)='showFiles(false)'>Esconder Arquivos</button>
 
-<button class="button btn-info" *ngIf='!showFile' (click)='showFiles(true)'>Show Files</button>
+<button class="button btn-info" *ngIf='!showFile' (click)='showFiles(true)'>Mostrar Arquivos</button>
 
 <div [hidden]="!showFile">
   <div class="panel panel-primary">
-    <div class="panel-heading">List of Files</div>
+    <div class="panel-heading">LISTA DE ARQUIVOS</div>
     <div *ngFor="let file of fileUploads | async">
       <div class="panel-body">
         <details-upload [fileUpload]='file'></details-upload>
